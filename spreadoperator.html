@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    
+    <script>
+        // ...
+        //คือ การกระจายค่า จาก object ต้นทาง ไป object ไปทาง 
+        // หรือ array ต้น ทาง ไปยัง array ปลายทาง
+
+        //Array
+        let fruit=['มะม่วง', 'แตงโม']
+        console.log(fruit)
+        let food=['ต้มยำ', 'กะเพรา']
+        console.log(food)
+        let allfood=[... food, ... fruit]
+        console.log(allfood)
+
+
+        //Object
+        let product={name:"ทุเรียน",price:200}
+        console.log(product)
+        let newproduct={...product,catergory:"ผลไม้"}
+        console.log(newproduct)
+        let newprice={...newproduct,price:500}
+        console.log(newprice)
+    </script>
+</body>
+</html>

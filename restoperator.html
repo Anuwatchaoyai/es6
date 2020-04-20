@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Operator</title>
+</head>
+<body>
+    
+    <script>
+        // ...
+        // Rest Operator คือ ใส่ ...ไปตรง parametor นั่นๆ ที่สามารถรับค่าได้อย่างไม่จำกัด
+         const addUser = (name,last,... city) => {
+            return name +" "+ last +" "+ city
+        }
+        console.log(addUser("Anuwat", "Chaoyai","Bangkok"));
+        console.log(addUser("Anuwat", "Chaoyai","Bangkok", "Korat"));
+
+        //ตัวอย่าง ใช้ rest operator ในการ return ค่า ออกมาเป็น array
+        const addMessage=(first,... message)=>{
+            return message.map(m=>first+message)
+        }
+
+        console.log(addMessage("Hello","JS","Angular"));
+
+
+        const addNumber=(... number)=>{
+            return number.reduce((first,current)=>{
+                return first+current
+            })
+        }
+        console.log(addNumber(10,20,30,40));
+    </script>
+</body>
+</html>

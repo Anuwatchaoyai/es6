@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals</title>
+</head>
+<body>
+    
+    <script>
+        //ตัวอย่าง ต่อ string แบบเดิม
+        const name="Anuwat"
+        const last="Chaoyai"
+        const city="Bangkok"
+
+        const all="Name = "+name+" Last = "+last+" City = "+city
+        const allnew="Name = "+name+"\
+        \nLast = "+last+"\
+        \nCity = "+city
+        console.log(all);
+        console.log(allnew);
+
+        //แบบใหม่ ES6 ใช้ สัญญลักษณ์ ` นี้ คอบ แล้วตัวให้ใช้ ${ตัวแปร}
+        const allname=`Name = ${name} Last = ${last} City = ${city}`
+        const allname2=`Name = ${name} 
+Last = ${last} 
+City = ${city}`
+        console.log(allname);
+        console.log(allname2);
+    </script>
+</body>
+</html>

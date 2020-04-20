@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Javascript</title>
+</head>
+<body>
+    <script>
+        // การสร้าง Object แบบ literals
+        var user={
+            name:"Anuwat",
+            age:30,
+            SayHi:function(){
+                return "Hello "+this.name
+            }
+        }
+        console.log(user.SayHi());
+
+        // สร้าง Class แบบเดิม
+        // function User(name,age){
+        //     this.name=name
+        //     this.age=age
+        // }
+        // User.prototype.SayHi=function(){
+        //     console.log("Hello = "+this.name +"Age = "+this.age);
+        // }
+
+        // var user1=new User("Anuwat", 30);
+        // user1.SayHi()
+
+
+        // สร้าง Class แบบใหม่
+        class User {    
+            constructor(name,age){
+                this.name=name
+                this.age=age
+            }
+            SayHi(){
+                console.log("Hello = "+this.name +"Age = "+this.age);
+            }
+        }
+
+        let user1=new User("Anuwat", 30)
+        user1.SayHi()
+    </script>
+</body>
+</html>

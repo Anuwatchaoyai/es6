@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorthand Property & Method</title>
+</head>
+<body>
+    
+    <script>
+        // แบบเดิม
+        let name = "Anuwat"
+        let last = "Chaoyai"
+        let user = {
+            name:name,
+            last:last
+        }
+        console.log(user);
+
+        // แบบใหม่ propery shorthand
+        // ชื่อตัวแปร กับ ชื่อ property ต้องเหมือนกัน
+        let newUser = {
+            name,last
+        }
+        console.log(newUser);
+
+        // แบบ function
+        function human(firstname,lastname,age){
+            return{
+                firstname,
+                lastname,
+                age
+            }
+        }
+        console.log(human("Noppanut","Huychan",30));
+    </script>
+</body>
+</html>

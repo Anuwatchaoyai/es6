@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance (การสืบทอดคุณสมบัติ Class)</title>
+</head>
+<body>
+    <script>
+        // การดึง คุณสมบัติจาก Class แม่ ไปยัง Class ลูก
+        // Class แม่
+        class Admin{
+            constructor(){
+                console.log("Call Constructor");
+            }
+            isPermission(){
+                console.log("Read Write Data From Database");
+            }
+        }
+
+        // Class ลูก ลืบทอด Class แม่
+        class User extends Admin {    
+            constructor(name,age){
+                // เรียกใช้ super() เพื่อดึง คุณสมบัติ constructor ของ Class แม่ Admin
+                // พร้อมทั้งเรียกใช้ Method isPermission() จาก Class แม่ ด้วย
+                super()
+                this.name=name
+                this.age=age
+            }
+            SayHi(){
+                console.log("Hello = "+this.name +"Age = "+this.age);
+            }
+        }
+
+        let user1=new User("Anuwat", 30)
+        user1.SayHi()
+
+        // พร้อมทั้งเรียกใช้ Method isPermission() จาก Class แม่ ด้วย
+        user1.isPermission()
+    </script>
+</body>
+</html>

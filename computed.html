@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed Property Name</title>
+</head>
+<body>
+    
+
+    <script>
+        // แบบเดิม
+        let food1={name:"Cake ส้ม", price:"200"}
+        let food2={"name":"Cake มะม่วง", "price":250}
+
+        console.log(food1);
+        console.log(food2);
+        // ยัดการดำเนินการทางคณิตศาสตร์ ไปใน property ได้
+        let user={
+            ['user'+1*10]:"Anuwat",
+            ['user'+2*20]:"aaaa"
+        }
+        console.log(user);
+
+        // ประกาศตัวแปร จากด้านนอกไว้เปลี่ยนค่า property หรือ  value ใน object ได้ตามตัวอย่าง
+        let name="Cake"
+        let food={
+            [name]:name + " มะม่วง", price: "250"
+        }
+        
+        console.log(food);
+
+        let menu={
+            [name]:`${name} ส้ม` , [`${name}Mix`]: "ผลส้ม"
+        }
+
+        //ชื่อ property ต้องตรงแป๊ะๆ
+
+        let {Cake,CakeMix}=menu
+        console.log(menu);
+        console.log(Cake);
+        console.log(CakeMix);
+    </script>
+</body>
+</html>

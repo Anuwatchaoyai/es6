@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    
+
+    <script>
+        // function ปกติ
+        // function sorwor(a,b){
+        //     return a+b
+        // }
+        // let result = sorwor(200,50)
+        // console.log(result);
+
+        // Arrow function
+        // const sorwor = (a,b) => {
+        //     return a+b
+        // }
+
+        // ถ้า ใน function มีแค่ คำสั่งเดียว สามารถทำให้สั้น ลงได้แบบนี้
+
+        // const sorwor = (a,b) => a+b
+        // let result = sorwor(200,50)
+
+        // const sorwor=a=>a+200
+        // let result = sorwor(50)
+
+        //funtion return object แบบ arrow function
+        const studen=name=>({name:name, age:10})
+        let result=studen("Anuwat")
+        console.log(result);
+
+        //มีปีกกา กรณีที่มีคำสั่งมากกว่า 1
+        //มีการ return
+        //return object
+        //ไม่มีปีกกา
+        // parameter 1 => ไม่มีวงเล็บ
+
+    </script>
+</body>
+</html>
